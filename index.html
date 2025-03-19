@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style type="text/css">
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            gap: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Test form</h2>
+    <form action="http://localhost:3000" target="_blank" method="post" class="form">
+        <label>Name:<input type="text" name="name"></label>
+        <label>Surname:<input type="text" name="surname"> </label>
+        <label>
+            Sex:
+            <input type="radio" name="sex" value="Чоловік">
+            <input type="radio" name="sex" value="Жінка">
+        </label>
+        <label>
+            Phone service:
+            <input type="checkbox" name="phoneService" value="KiyivStar">
+            <input type="checkbox" name="phoneService" value="MTS">
+            <input type="checkbox" name="phoneService" value="Life">
+            <input type="checkbox" name="phoneService" value="Huy">
+            <input type="checkbox" name="phoneService" value="hEr">
+        </label>
+       
+        <label>
+            Offers:
+            <textarea name="offers"></textarea>
+        </label>
+        <input type="submit">
+        <a href="http://localhost:3000/">See all users</a>
+    </form>
+</body>
+</html>
