@@ -105,7 +105,7 @@ export const UserTemplate = (body:User) => {
             <p>Оператор зв'язку:  <span class="highlight">${phoneService}</span></p>
             <p>Пропозиції:  <span class="highlight">${offers}</span></p>
             <p>ID користувача:  <span class="highlight">${_id}</span></p>
-            <a href="http://localhost:3000/">Переглянути всіх користувачів...</a>
+            <a href="https://usersproject-b1n0.onrender.com/">Переглянути всіх користувачів...</a>
         </div>
     </body>
     </html>`
