@@ -1,8 +1,8 @@
 import { User } from "../user.schema";
 
 export const UserTemplate = (body:User) => {
-    const {name, surname, sex, offers, phoneService, _id} = body;
-    const imgHref = sex === 'Чоловік' ? 'https://cdn-icons-png.flaticon.com/512/3233/3233508.png' : 'https://cdn-icons-png.flaticon.com/512/3577/3577099.png';
+    const {name, surname, gender, offers, phoneService, _id} = body;
+    const imgHref = gender === 'Чоловік' ? 'https://cdn-icons-png.flaticon.com/512/3233/3233508.png' : 'https://cdn-icons-png.flaticon.com/512/3577/3577099.png';
 
     return `
     <!DOCTYPE html>
@@ -101,7 +101,7 @@ export const UserTemplate = (body:User) => {
             <img src="${imgHref}" alt="Sex icon" height="200px">
             <p>Ім'я:  <span class="highlight">${name}</span></p>
             <p>Прізвище:  <span class="highlight">${surname}</span></p>
-            <p>Стать:  <span class="highlight">${sex}</span></p>
+            <p>Стать:  <span class="highlight">${gender}</span></p>
             <p>Оператор зв'язку:  <span class="highlight">${phoneService}</span></p>
             <p>Пропозиції:  <span class="highlight">${offers}</span></p>
             <p>ID користувача:  <span class="highlight">${_id}</span></p>

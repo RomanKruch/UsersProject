@@ -10,7 +10,7 @@ export class User extends Document {
     surname: string;
 
     @Prop()
-    sex: string;
+    gender: string;
 
     @Prop({ type: [String] })
     phoneService: string[];

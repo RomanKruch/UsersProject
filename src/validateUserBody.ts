@@ -1,7 +1,7 @@
 import { UserDto } from "./user.dto";
 
 export const validateUserBody = (body: UserDto) => {
-    const {name, surname, sex, offers, phoneService} = body;
+    const {name, surname, gender, offers, phoneService} = body;
     const errors: string[] = [];
 
     if (!name) {
@@ -12,8 +12,8 @@ export const validateUserBody = (body: UserDto) => {
         errors.push("Прізвище обов'язкове! (Input name має бути 'surname')!")
     }
 
-    if (sex !== 'Чоловік' && sex !=='Жінка') {
-        errors.push("Стать має бути Чоловік або Жінка! (Input name має бути 'sex', value має бути 'Чоловік' або 'Жінка')!")
+    if (gender !== 'Чоловік' && gender !=='Жінка') {
+        errors.push("Стать має бути Чоловік або Жінка! (Input name має бути 'gender', value має бути 'Чоловік' або 'Жінка')!")
     }
 
     if (!offers) {
